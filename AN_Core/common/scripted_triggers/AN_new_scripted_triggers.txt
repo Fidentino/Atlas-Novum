@@ -325,7 +325,7 @@ AN_can_chop_forest = {
 			owner = {
 				OR = {
 					ai = no
-					owner = { treasury = 50 }
+					treasury = 50
 				}
 			}
 		}
@@ -334,7 +334,7 @@ AN_can_chop_forest = {
 			owner = {
 				OR = {
 					ai = no
-					owner = { treasury = 100 }
+					treasury = 100
 				}
 			}
 		}
@@ -343,7 +343,7 @@ AN_can_chop_forest = {
 			owner = {
 				OR = {
 					ai = no
-					owner = { treasury = 150 }
+					treasury = 150
 				}
 			}
 		}
@@ -358,7 +358,7 @@ AN_can_reforest = {
 			owner = {
 				OR = {
 					ai = no
-					owner = { treasury = 25 }
+					treasury = 25
 				}
 			}
 		}
@@ -367,7 +367,7 @@ AN_can_reforest = {
 			owner = {
 				OR = {
 					ai = no
-					owner = { treasury = 150 }
+					treasury = 150
 				}
 			}
 		}
@@ -376,7 +376,7 @@ AN_can_reforest = {
 			owner = {
 				OR = {
 					ai = no
-					owner = { treasury = 200 }
+					treasury = 200
 				}
 			}
 		}
