@@ -46,6 +46,7 @@ province_event = {
 	option = { #
 		trigger = {
 			OR = {
+				ai = no
 				AN_can_chop_forest = { TYPE = needleleaf }
 				AN_can_chop_forest = { TYPE = broadleaf }
 				AN_can_chop_forest = { TYPE = coniferous }
