@@ -17,6 +17,11 @@ country_event = {
 	trigger = {
 		has_dlc = "Cradle of Civilization"
 		NOT = { religion_group = muslim }
+		any_owned_province = {
+			NOT = { religion_group = muslim }
+			has_port = yes
+			NOT = { has_province_modifier = trading_settlement }
+		}
 		any_active_trade_node = {
 			any_country_active_in_node = {
 				religion_group = muslim
@@ -102,6 +107,12 @@ country_event = {
 	trigger = {
 		has_dlc = "Cradle of Civilization"
 		NOT = { religion_group = muslim }
+		any_owned_province = {
+			NOT = { religion_group = muslim }
+			has_port = yes
+			NOT = { has_province_flag = had_missionaries_settle }
+			NOT = { has_province_modifier = islamic_missionaries }
+		}
 		any_active_trade_node = {
 			any_country_active_in_node = {
 				religion_group = muslim
@@ -196,6 +207,9 @@ country_event = {
 	trigger = {
 		has_dlc = "Cradle of Civilization"
 		NOT = { religion_group = muslim }
+		any_owned_province = {
+			has_port = yes
+		}
 		any_active_trade_node = {
 			any_country_active_in_node = {
 				religion_group = muslim
@@ -314,6 +328,10 @@ country_event = {
 	
 	trigger = {
 		has_dlc = "Cradle of Civilization"
+		any_owned_province = {
+			is_capital = no
+			NOT = { religion_group = muslim }
+		}
 		any_active_trade_node = {
 			any_country_active_in_node = {
 				religion_group = muslim
@@ -438,6 +456,15 @@ country_event = {
 	trigger = {
 		has_dlc = "Cradle of Civilization"
 		NOT = { religion_group = muslim }
+		any_owned_province = {
+			religion_group = muslim
+			any_neighbor_province = {
+				NOT = { religion_group = muslim }
+				area = PREV
+				owned_by = ROOT
+				is_capital = no
+			}
+		}
 		any_active_trade_node = {
 			any_country_active_in_node = {
 				religion_group = muslim
@@ -685,16 +712,16 @@ country_event = {
 	trigger = {
 		has_dlc = "Cradle of Civilization"
 		any_active_trade_node = {
+			any_trade_node_member_province = {
+				owned_by = ROOT
+				is_capital = yes
+			}
 			any_country_active_in_node = {
 				NOT = { tag = ROOT }
 				trading_policy_in_node = {
 					node = PREV
 					policy = propagate_religion
 				}
-			}
-			any_trade_node_member_province = {
-				owned_by = ROOT
-				is_capital = yes
 			}
 		}
 	}
@@ -703,16 +730,16 @@ country_event = {
 		hidden_effect = {
 			random_active_trade_node = {
 				limit = {
+					any_trade_node_member_province = {
+						owned_by = ROOT
+						is_capital = yes
+					}
 					any_country_active_in_node = {
 						NOT = { tag = ROOT }
 						trading_policy_in_node = {
 							node = PREV
 							policy = propagate_religion
 						}
-					}
-					any_trade_node_member_province = {
-						owned_by = ROOT
-						is_capital = yes
 					}
 				}
 				random_country = {
@@ -811,6 +838,11 @@ country_event = {
 	
 	trigger = {
 		has_dlc = "Cradle of Civilization"
+		any_owned_province = {
+			NOT = { religion_group = muslim }
+			is_capital = no
+			NOT = { has_province_modifier = chiefs_with_pretensions }
+		}
 		any_active_trade_node = {
 			any_country_active_in_node = {
 				trading_policy_in_node = {
